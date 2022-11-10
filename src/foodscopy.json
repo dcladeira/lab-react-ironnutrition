@@ -1,0 +1,104 @@
+[
+  {
+    "name": "Pizza",
+    "calories": 400,
+    "image": "./img/eTmWoAN_d.webp",
+    "servings": 1
+  },
+  {
+    "name": "Salad",
+    "calories": 150,
+    "image": "./img/DupGBz5_d.webp",
+    "servings": 1
+  },
+  {
+    "name": "Sweet Potato",
+    "calories": 120,
+    "image": "./img/hGraGyR_d.webp",
+    "servings": 1
+  },
+  {
+    "name": "Gnocchi",
+    "calories": 500,
+    "image": "./img/93ekwW0_d.webp",
+    "servings": 1
+  },
+  {
+    "name": "Pot Roast",
+    "calories": 350,
+    "image": "./img/WCzJDWz_d.webp",
+    "servings": 1
+  },
+  {
+    "name": "Lasagna",
+    "calories": 750,
+    "image": "./img/ClxOafl_d.webp",
+    "servings": 1
+  },
+  {
+    "name": "Hamburger",
+    "calories": 400,
+    "image": "./img/LoG39wK_d.webp",
+    "servings": 1
+  },
+  {
+    "name": "Pad Thai",
+    "calories": 475,
+    "image": "./img/5ktcSzF_d.webp",
+    "servings": 1
+  },
+  {
+    "name": "Almonds",
+    "calories": 75,
+    "image": "./img/JRp4Ksx_d.webp",
+    "servings": 1
+  },
+  {
+    "name": "Sarma",
+    "calories": 200,
+    "image": "./img/yOlf4Fj_d.webp",
+    "servings": 1
+  },
+  {
+    "name": "Bacon",
+    "calories": 175,
+    "image": "./img/7GlqDsG_d.webp",
+    "servings": 1
+  },
+  {
+    "name": "Hot Dog",
+    "calories": 275,
+    "image": "./img/QqVHdRu_d.webp",
+    "servings": 1
+  },
+  {
+    "name": "Chocolate Cake",
+    "calories": 490,
+    "image": "./img/yrgzA9x_d.webp",
+    "servings": 1
+  },
+  {
+    "name": "Wheat Bread",
+    "calories": 175,
+    "image": "./img/TsWzMfM_d.webp",
+    "servings": 1
+  },
+  {
+    "name": "Orange",
+    "calories": 85,
+    "image": "./img/abKGOcv_d.webp",
+    "servings": 1
+  },
+  {
+    "name": "Banana",
+    "calories": 175,
+    "image": "./img/BMdJhu5_d.webp",
+    "servings": 1
+  },
+  {
+    "name": "Yogurt",
+    "calories": 125,
+    "image": "./img/URhdrAm_d.webp",
+    "servings": 1
+  }
+]
