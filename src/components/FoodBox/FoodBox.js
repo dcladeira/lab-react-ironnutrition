@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Card, Col, Button, Row} from 'antd';
+import { Card, Col, Button, Row, Alert} from 'antd';
 import AddNewForm from '../AddNewForm/AddNewForm';
-import Search from 'antd/lib/transfer/search';
+import SearchFood from '../SearchFood/SearchFood';
 
 // Importa imagens porque o computador do trabalho bloqueia o site usado no arquivo foods.json.
 import Pizza from '../../img/eTmWoAN_d.webp';
@@ -132,6 +132,13 @@ function FoodBox() {
       ]
 
     const [foods, setFoods] = useState(foodsArray);
+    const [searchWord, setSearchWord] = useState("");
+    const [buttonAdd, setButtonAdd] = useState(false);
+
+    // Mostra o formulário de inclusão
+    const handleButtonAdd = () => {
+      return setButtonAdd(!buttonAdd);
+    }
 
     // Adiciona um novo item na lista
     const addFood = (newFood) => {
@@ -146,17 +153,11 @@ function FoodBox() {
       })
       setFoods(newFoods);
     }
-
-    // Procura item na lista
-    const searchFood = (substring) => {
-      const newFoods = foods.filter((food, index) => {
-        return food.name.includes(substring);
-      })
-      setFoods(newFoods);
-    }
     
     // Renderiza todos os itens da lista
-    const renderFoods = foods.map((food, index) => {
+    const renderFoods = foods
+    .filter((food)=>food.name.toLowerCase().includes(searchWord.toLowerCase()))
+    .map((food, index) => {
       return (
         <Col className="foodBox" key={index}>
             <Card
@@ -176,18 +177,28 @@ function FoodBox() {
     });
 
     return (
-        <Col>
-            <Row>
-                <Search searchFood={searchFood} />
-            </Row>
-            <Row>
-                <AddNewForm addFood={addFood} />
-            </Row>
-            <Row>
-                {renderFoods}
-            </Row>
-        </Col>
-
+      <div>
+        <Row>
+          <Col style={{margin: 10}}>
+            <SearchFood searchWord={searchWord} setSearchWord={setSearchWord} />
+          </Col>
+          <Col style={{margin: 10}}>
+            <Row>{buttonAdd && <AddNewForm addFood={addFood} />}</Row>
+            <Row><Button type="primary" onClick={handleButtonAdd}>Show/Hide Add Food Form</Button></Row>
+          </Col>
+        </Row>
+        <Row>
+            {renderFoods}
+        </Row>
+        <Row>
+          {!foods.length && <Alert
+            message="Ops... There's no food."
+            type="warning"
+            closable
+            // onClose={onClose}
+          />}
+        </Row>
+      </div>
     )
 }
 
